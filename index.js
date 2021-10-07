@@ -82,7 +82,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
-console.log(reviews[5])
+console.log(reviews[5].feedback)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -120,8 +120,8 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
 
@@ -139,10 +139,10 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length-1].name} gave the restaurant a ${array[array.length-1].rating} star review, and their feedback was: ${array[array.length-1].feedback}`
 } 
-
+console.log(getLastReview(reviews))
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
