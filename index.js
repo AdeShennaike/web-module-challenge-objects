@@ -54,11 +54,11 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   discount: function(personnel){
-    if(personnel === 'teacher'){
-      return burger.price - (burger.price * .25)
-    }
-    else if(personnel === 'student' || personnel === 'public' ){
+    if(personnel === 'public'){
       return burger.price - (burger.price * .10)
+    }
+    else if(personnel === 'student' || personnel === 'teacher'){
+      return burger.price - (burger.price * .25)
     }
   }
 }
@@ -91,8 +91,8 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
-
-
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays"
+console.log(reviews[7]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -104,8 +104,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+function addReview(array, name, rating, feedback){
+  array.push({name, rating, feedback})
+  return array
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
